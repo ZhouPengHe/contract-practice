@@ -21,8 +21,20 @@ async function main() {
   );
 
   await stake.waitForDeployment();
-  // 0xc6440294f192FB883616FE51a5caC948e2Fb5547
+  // 0x7DA3af5B1665c86bFCe61418734660D6f9ae0524
   console.log("MetaNodeStake deployed to:", await stake.getAddress());
+
+  // 获取逻辑合约地址
+  const implementationAddress = await upgrades.erc1967.getImplementationAddress(await stake.getAddress());
+  console.log("Verifying implementation contract:", implementationAddress);
+
+  // 验证逻辑合约
+  await hre.run("verify:verify", {
+    address: implementationAddress,
+    constructorArguments: [], // 逻辑合约没有构造参数
+  });
+
+  console.log("Deployment and verification finished!");
 }
 
 main()

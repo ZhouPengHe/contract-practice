@@ -18,6 +18,12 @@ async function main() {
   await token.waitForDeployment();
 
   console.log("MetaNodeToken deployed to:", await token.getAddress());
+  // 合约验证
+  await hre.run("verify:verify", {
+      address: await token.getAddress(),
+      constructorArguments: [initialSupply],
+  });
+  console.log("Verification successful!");
 }
 
 main().catch((error) => {
