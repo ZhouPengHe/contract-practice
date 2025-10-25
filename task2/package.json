@@ -1,0 +1,30 @@
+{
+  "name": "task2",
+  "version": "1.0.0",
+  "description": "MetaNode Stake 系统是一个基于以太坊的质押和奖励智能合约系统，包括两个主要合约： 1. **MetaNodeToken (MND)**: ERC20 奖励代币合约。 2. **MetaNodeStake**: 支持 ETH/ERC20 质押的质押池合约，用户可领取 MND 奖励。",
+  "main": "hardhat.config.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-ethers": "^3.1.0",
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "@nomiclabs/hardhat-etherscan": "^3.1.8",
+    "@openzeppelin/hardhat-upgrades": "^3.9.1",
+    "chai": "^4.5.0",
+    "ethers": "^6.15.0",
+    "hardhat": "^2.22.8",
+    "solidity-coverage": "^0.8.16"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^5.4.0",
+    "@openzeppelin/contracts-upgradeable": "^5.4.0",
+    "dotenv": "^17.2.3"
+  }
+}
