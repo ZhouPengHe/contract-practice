@@ -24,7 +24,7 @@ npx hardhat run scripts/deploy.js --network sepolia
 
 ### 3. 合约验证
 ```bash
-npx hardhat verify <contract_address> --network sepolia
+npx hardhat verify <contract_address> --network sepolia <param1> <param2> ...
 ```
 
 ---
