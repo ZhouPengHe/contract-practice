@@ -10,8 +10,20 @@ MetaNode Stake 系统是一个基于以太坊的质押和奖励智能合约系�
 - 奖励按区块累积发放，池权重影响奖励分配。
 - 支持合约升级（UUPS）、暂停操作、访问控制。
 - 完全事件记录，便于前端和链上监听。
-
 ---
+
+![Coverage](https://img.shields.io/badge/coverage-90%25-brightgreen)
+
+## 测试覆盖率
+
+- **MetaNodeStake.sol**: 90.6% 语句覆盖率, 57.53% 分支覆盖率
+- **MetaNodeToken.sol**: 100% 覆盖率
+
+覆盖率报告生成于 [`./coverage/index.html`](./coverage/index.html)，可在浏览器中打开查看详细报告。
+
+
+
+
 
 ## 项目结构
 
@@ -74,7 +86,7 @@ ETHERSCAN_API_KEY="你的EtherscanAPIKey"
 
 ## 合约部署
 
-### 1️⃣ 部署奖励代币 MetaNodeToken
+### 部署奖励代币 MetaNodeToken
 
 ```bash
 npx hardhat run scripts/deployToken.js --network sepolia
@@ -84,7 +96,7 @@ npx hardhat run scripts/deployToken.js --network sepolia
 - 合约地址
 - 初始铸造数量
 
-### 2️⃣ 部署质押合约 MetaNodeStake
+### 部署质押合约 MetaNodeStake
 
 ```bash
 npx hardhat run scripts/deployStake.js --network sepolia
@@ -150,5 +162,5 @@ await stakeContract.claim(poolId);
 ## 测试
 
 ```bash
-npx hardhat test
+npm test
 ```

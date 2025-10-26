@@ -201,7 +201,6 @@ contract MetaNodeStake is
     {
 
     }
-
     // ************************************** ADMIN FUNCTION **************************************
 
     // 设置 MetaNode 代币合约地址，只能由具有 ADMIN_ROLE 的账户调用

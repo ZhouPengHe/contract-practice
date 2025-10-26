@@ -6,7 +6,11 @@ const { PRIVATE_KEY, SEPOLIA_RPC_URL, ETHERSCAN_API_KEY } = process.env;
 
 module.exports = {
   solidity: {
-    version: "0.8.22"
+    version: "0.8.22",
+    optimizer: {
+      enabled: true,
+      runs: 1000
+    }
   },
   networks: {
     hardhat: {},
